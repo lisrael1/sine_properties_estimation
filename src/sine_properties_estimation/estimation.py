@@ -112,9 +112,10 @@ class SineProperties:
         self.total_seconds = total_seconds
         self.samples = len(raw_data_1d)
         self.seconds_between_adjacent_samples = total_seconds / self.samples
+        self.max_available_freq = 1 / self.seconds_between_adjacent_samples
 
         t = np.linspace(0, total_seconds, self.samples)
-        self.est_freq = freq_by_fft(raw_data_1d, fs=1 / self.seconds_between_adjacent_samples)
+        self.est_freq = freq_by_fft(raw_data_1d, fs=self.max_available_freq)
         self.est_sine_amp, self.est_phase_rad, self.est_offset = find_amp_phase_by_ls(raw_data_1d, t, self.est_freq)
 
     def __str__(self):
@@ -123,7 +124,8 @@ class SineProperties:
                  freq=self.est_freq,
                  sine_amp=self.est_sine_amp,
                  phase_rad=self.est_phase_rad,
-                 offset=self.est_offset)
+                 offset=self.est_offset,
+                 max_available_freq=self.max_available_freq)
         return print_dict(d, return_instead_of_print=True)
 
     def __repr__(self):

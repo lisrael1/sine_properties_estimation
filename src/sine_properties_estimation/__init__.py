@@ -1,7 +1,10 @@
 """
 TODO
     add docstrings.
-    validate inputs, add exceptions.
+    add explains
+        about indicators
+        about analysis flow
+    validate inputs, edge cases, add exceptions.
     write tests
         random sine, and check output dist and for max abs error.
         input invalid values, and test exceptions
