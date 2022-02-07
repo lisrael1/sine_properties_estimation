@@ -40,10 +40,11 @@ def freq_by_fft(sig, fs):
     sig -= np.mean(sig)
     windowed = sig * scipy.signal.blackmanharris(len(sig))
     f = np.fft.rfft(windowed)
+    f = abs(f)
 
     # Find the peak and interpolate to get a more accurate peak
-    i = np.argmax(abs(f))  # Just use this for less-accurate, naive version
-    true_i = parabolic(np.log(abs(f)), i)[0]
+    i = np.argmax(f)  # Just use this for less-accurate, naive version
+    true_i = parabolic(np.log(f), i)[0]
 
     # Convert to equivalent frequency
     return fs * true_i / len(windowed)

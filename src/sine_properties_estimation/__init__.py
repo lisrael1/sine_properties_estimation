@@ -4,10 +4,14 @@ TODO
     add explains
         about indicators
         about analysis flow
+        explain why need LS for offset and cannot use average (when you have non coherent sine)
     validate inputs, edge cases, add exceptions.
     write tests
         random sine, and check output dist and for max abs error.
         input invalid values, and test exceptions
+    add examples folder, or just leave it here as if main...
+    add automatic output when frequency is 0
+    add option for just freq estimation
 """
 from sine_properties_estimation.estimation import SineProperties
 
