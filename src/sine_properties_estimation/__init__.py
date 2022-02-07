@@ -1,3 +1,11 @@
+"""
+TODO
+    add docstrings.
+    validate inputs, add exceptions.
+    write tests
+        random sine, and check output dist and for max abs error.
+        input invalid values, and test exceptions
+"""
 from sine_properties_estimation.estimation import SineProperties
 
 

@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="sine_properties_estimation",
-    version="0.1.0",
+    version="0.1.1",
     author="Lior Israeli",
     author_email="israelilior@gmail.com",
     description="estimate sine frequency, amp, phase and offset from 1D raw data",

@@ -1,4 +1,4 @@
-## Sine properties estimation
+# Sine properties estimation
 
 ### Estimating sine properties from 1D array of raw data
 Let say you have a noisy record of a sine, and you want to know its properties.<br>
@@ -10,6 +10,8 @@ Probably useful for DSP (signal processing) and spectral analysis. <br>
 usage example:
     input:
         import numpy as np
+        
+        from sine_properties_estimation import calc_sine_properties
 
         # sine with random noise
         samples = 1000
