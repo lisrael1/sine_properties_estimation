@@ -42,3 +42,5 @@ usage example:
                 offset : 63.01041660377115
         --------------------------------------------------
 ```
+### Plot of that sine:
+![sine example](examples/readme_example/sine.png)
